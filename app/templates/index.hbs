@@ -1,0 +1,27 @@
+<div class="demo_inputs">
+  <label for="ro">Initial Read Offset:</label>
+  {{input value=initialReadOffset type=number id="ro"}}
+  <label for="lh">Load Horizon:</label>
+  {{input value=loadHorizon type=number id="lh"}}
+  <label for="uh">Unload Horizon:</label>
+  {{input value=unloadHorizon type=number id="uh"}}
+  <label for="ps">Page Size:</label>
+  {{input value=pageSize type=number id="ps"}}
+</div>
+<div class="demo_dataset-wrapper">
+  {{#impagination-list fetch=fetch initial-read-offset=initialReadOffset load-horizon=loadHorizon unload-horizon=unloadHorizon page-size=pageSize as |records state pages|}}
+    <div class="demo_read-offset">Current Read Offset: {{state.readOffset}} </div>
+    <div class="demo_pages">
+    {{#each pages as |page index|}}
+      {{pages-display  page=page state=state records=records index=index}}
+    {{/each}}
+    </div>
+    <div class="demo_records-wrapper">
+      <div class="demo_records-list-container" style="height: 500px; width: 600px;">
+        {{#ember-collection items=records estimated-height=500px  estimated-width=600px cell-layout=(fixed-grid-layout 600 70) as |record index|}}
+          <div class="demo_record" style={{color-block record.content.hsl}}>P{{record.page.offset}} - R{{record.index}}</div>
+        {{/ember-collection}}
+      </div>
+    </div>
+  {{/impagination-list}}
+</div>
