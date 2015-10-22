@@ -1,0 +1,5 @@
+{{#impagination-dataset fetch=fetchColorPage as |colors|}}
+  {{#ember-collection items=colors as |color| }}
+    {{color-block hue=color}}
+  {{/ember-collection}}
+{{/impagination-dataset}}

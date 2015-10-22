@@ -1,0 +1,8 @@
+//GET /spectrum/colors?page=5
+{
+  "colors": [
+    "hsl(100, 100%, 50%)",
+    "hsl(101, 100%, 50%)",
+    "..."
+  ]
+}
