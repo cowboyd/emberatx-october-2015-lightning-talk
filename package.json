@@ -35,6 +35,7 @@
     "ember-cli-uglify": "^1.2.0",
     "ember-data": "1.13.8",
     "ember-disable-proxy-controllers": "^1.0.0",
-    "ember-export-application-global": "^1.0.3"
+    "ember-export-application-global": "^1.0.3",
+    "ember-presents": "git://github.com/cowboyd/ember-presents.git#db45b51dc66fa9691e8805def611bf44af58376e"
   }
 }
