@@ -103,8 +103,11 @@ GET /spectrum/colors?page=5
   {{/ember-collection}}
 {{/impagination-dataset}}
 
-## Action time
+## TRUNCATE
 
 * turns out our color server is slow. There's a 1s
 
-## How Does It Know?
+## Fin
+
+* worry about fetching your data, not about loading it and unloading it.
+*
