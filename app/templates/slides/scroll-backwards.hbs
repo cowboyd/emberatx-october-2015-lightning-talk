@@ -1,4 +1,5 @@
 <h1>Unload Horizon</h1>
+<p><em>white stripe marks the unload horizon</em></p>
 {{#color-fetch delay=10 color-count=300 as |fetchColorPage|}}
   <div class="demo_dataset-wrapper">
     {{#impagination-list fetch=fetchColorPage initial-read-offset=0 load-horizon=2 unload-horizon=6 page-size=10 as |records state pages|}}
